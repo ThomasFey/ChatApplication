@@ -2,14 +2,19 @@
   background-color: #00802F;
   height: 100px;
   margin: 0px;
+  padding: 0px;
 }
 
 #content {
   background-color: #adbedb;
   height: 300px;
+  margin: 0px;
+  padding: 0px;
 }
 
 #footer {
   background-color: #d6d6d6;
   height: 50px;
+  margin: 0px;
+  padding: 0px;
 }
