@@ -1,4 +1,15 @@
 #header {
   background-color: #00802F;
   height: 100px;
+  margin: 0px;
+}
+
+#content {
+  background-color: #adbedb;
+  height: 300px;
+}
+
+#footer {
+  background-color: #d6d6d6;
+  height: 50px;
 }
