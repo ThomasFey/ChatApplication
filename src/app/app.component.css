@@ -1,12 +1,19 @@
 #header {
   background-color: #FFFFFF;
-  height: 100px;
+  height: auto;
   margin: 0px;
   padding: 0px;
+  text-align: left;
 }
 
 .img {
-  align: left;
+  display: left;
+  text-align: left;
+}
+
+#logo {
+  text-align: left;
+  width: 175px;
 }
 
 #content {
