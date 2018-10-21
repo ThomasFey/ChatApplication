@@ -1,8 +1,12 @@
 #header {
-  background-color: #00802F;
+  background-color: #FFFFFF;
   height: 100px;
   margin: 0px;
   padding: 0px;
+}
+
+.img {
+  align: left;
 }
 
 #content {
@@ -13,7 +17,7 @@
 }
 
 #footer {
-  background-color: #d6d6d6;
+  background-color: #00802F;
   height: 50px;
   margin: 0;
   padding: 0;
