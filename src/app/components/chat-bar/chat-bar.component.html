@@ -1,0 +1,7 @@
+<h3>Kommuniaktionsanwendung</h3>
+<textarea rows="2" class="form-control" placeholder="Bitte hier Text eingeben" [(ngModel)]="chatMessage" (keyup.enter)="addMessage()"></textarea>
+<!--<button class="btn btn-primary" (click)="addMessage2(chatMessage)" [disabled]="!chatMessage">abschicken</button>-->
+<div>
+  <button class="btn btn-primary" (click)="addMessage()" [disabled]="!chatMessage">senden</button>
+</div>
+r
