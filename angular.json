@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ChatApplication": {
+    "ChatAppStep0": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ChatApplication",
+            "outputPath": "dist/ChatApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -50,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ChatApplication:build"
+            "browserTarget": "ChatAppStep0:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ChatApplication:build:production"
+              "browserTarget": "ChatAppStep0:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ChatApplication:build"
+            "browserTarget": "ChatAppStep0:build"
           }
         },
         "test": {
@@ -95,7 +99,7 @@
         }
       }
     },
-    "ChatApplication-e2e": {
+    "ChatAppStep0-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +107,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ChatApplication:serve"
+            "devServerTarget": "ChatAppStep0:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ChatApplication:serve:production"
+              "devServerTarget": "ChatAppStep0:serve:production"
             }
           }
         },
@@ -123,5 +127,5 @@
       }
     }
   },
-  "defaultProject": "ChatApplication"
+  "defaultProject": "ChatAppStep0"
 }
