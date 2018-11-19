@@ -19,9 +19,17 @@ export class AppComponent {
       this.historyMessage = '';
     }
 
+    
+
+    if(!name){
+      name = "Anonym";
+    }
+    value = value.replace(/\r?\n/g, '<br />');
+
     const dateTime: Date = new Date();
 
     // this.historyMessage += value;
+
     this.historyMessage += `${dateTime.toLocaleString()}<br>${name}: ${value}<br>`;
   }
 
