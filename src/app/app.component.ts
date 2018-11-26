@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Person } from 'src/app/shared/Models/person';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title = 'meine neue chat app...';
+  public title = 'Chat App';
   public historyMessage: string;
 
   constructor() {
@@ -19,8 +20,9 @@ export class AppComponent {
     }
 
     const dateTime: Date = new Date();
+    value = value.replace("\n", '<br />');
 
     // this.historyMessage += value;
-    this.historyMessage += `${dateTime.toLocaleString()}<br>${value}<br>`;
+    this.historyMessage += `${dateTime.toLocaleString()} ${Person.Nickname}:<br>${value}<br>`;
   }
 }

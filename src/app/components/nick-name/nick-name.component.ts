@@ -18,6 +18,6 @@ export class NickNameComponent implements OnInit {
   public createNickname(name: string): void {
     Person.Nickname = name;
 
-    this.message = `nickname: '${name}' erstellt`;
+    this.message = `Hallo ${name}. Willkommen auf unserer Chat App`;
   }
 }

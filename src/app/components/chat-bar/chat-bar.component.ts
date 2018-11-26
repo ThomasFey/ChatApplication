@@ -17,8 +17,6 @@ export class ChatBarComponent {
 
   public addMessage(value: string): void {
     if (Person.Nickname) {
-      value = `${Person.Nickname}<br>${value}`;
-
       this.chatHistory.emit(value);
       this.chatMessage = '';
     } else {
