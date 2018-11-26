@@ -6,7 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ChatBarComponent } from './components/chat-bar/chat-bar.component';
 import { ChatHistoryComponent } from './components/chat-history/chat-history.component';
-import { NicknameComponent } from './components/nickname/nickname.component';
+import { NickNameComponent } from './components/nick-name/nick-name.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { NicknameComponent } from './components/nickname/nickname.component';
     FooterComponent,
     ChatBarComponent,
     ChatHistoryComponent,
-    NicknameComponent
+    NickNameComponent
   ],
   imports: [
     BrowserModule,

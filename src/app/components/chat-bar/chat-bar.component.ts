@@ -1,11 +1,12 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { Person } from 'src/app/shared/Models/person';
 
 @Component({
   selector: 'app-chat-bar',
   templateUrl: './chat-bar.component.html',
   styleUrls: ['./chat-bar.component.css']
 })
-export class ChatBarComponent implements OnInit {
+export class ChatBarComponent {
 
   @Output() chatHistory: EventEmitter<string> = new EventEmitter();
 
@@ -14,13 +15,14 @@ export class ChatBarComponent implements OnInit {
   constructor() {
   }
 
-  ngOnInit() {
-  }
-
   public addMessage(value: string): void {
-    // alert(value);
-    this.chatHistory.emit(value);
+    if (Person.Nickname) {
+      value = `${Person.Nickname}<br>${value}`;
 
-    this.chatMessage = '';
+      this.chatHistory.emit(value);
+      this.chatMessage = '';
+    } else {
+      alert('Nickname fehlt');
+    }
   }
 }

@@ -8,36 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public title = 'meine neue chat app...';
   public historyMessage: string;
-  public name: string;
 
   constructor() {
     this.historyMessage = '';
   }
 
-  public onChatHistory(value: string, name: string): void {
+  public onChatHistory(value: string): void {
     if (!this.historyMessage) {
       this.historyMessage = '';
     }
 
-    
-
-    if(!name){
-      name = "Anonym";
-    }
-    value = value.replace(/\r?\n/g, '<br />');
-
     const dateTime: Date = new Date();
 
     // this.historyMessage += value;
-
-    this.historyMessage += `${dateTime.toLocaleString()}<br>${name}: ${value}<br>`;
-  }
-
-  public onSetNickname(name: string): void {
-    if (!this.name) {
-      this.name = '';
-    }
-
-    this.name = name;
+    this.historyMessage += `${dateTime.toLocaleString()}<br>${value}<br>`;
   }
 }
