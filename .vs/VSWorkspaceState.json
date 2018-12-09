@@ -1,9 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\ChatApi",
     "\\src",
     "\\src\\app"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\package-lock.json",
   "PreviewInSolutionExplorer": false
 }

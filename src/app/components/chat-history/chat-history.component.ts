@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ChatService } from 'src/app/shared/services/chat.service';
 
 @Component({
   selector: 'app-chat-history',
@@ -7,12 +8,26 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChatHistoryComponent implements OnInit {
 
-  @Input() history: string;
+  public history: string;
 
-  constructor() {
-  }
+  constructor(private chatService: ChatService) { }
 
   ngOnInit() {
+    setInterval(() => {
+      this.getHistory();
+    }, 2000);
   }
 
+  private getHistory(): void {
+    this.chatService.getHistory()
+      .subscribe(response => {
+        this.history = '';
+
+        for (const history of response.reverse()) {
+          const date = new Date(history.date);
+
+          this.history += `${history.nickname}:<br>(${date.toLocaleString('de')})<br>${history.message}<br>`;
+        }
+      });
+  }
 }
