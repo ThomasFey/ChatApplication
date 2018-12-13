@@ -1,4 +1,4 @@
 <h3>nick name</h3>
-<input type="text" class="form-control" placeholder="bitte nickname eingeben..." [(ngModel)]="nickname">
-<button class="btn btn-primary" (click)="createNickname(nickname)" [disabled]="!nickname">erstellen</button>
+<label id="nickname-label" type="text" class="form-control" [(ngModel)]="nickname"></label>
+<button class="btn btn-primary" onclick="document.getElementById('modal-wrapper').style.display='block'" style="width:200px; margin-top:200px; margin-left:160px;">Nickname ändern</button>
 <div>{{message}}</div>

@@ -3,8 +3,9 @@
     "",
     "\\ChatApi",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\environments"
   ],
-  "SelectedNode": "\\package-lock.json",
+  "SelectedNode": "\\src\\test.ts",
   "PreviewInSolutionExplorer": false
 }

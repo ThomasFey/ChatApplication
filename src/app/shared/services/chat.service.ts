@@ -9,8 +9,8 @@ export class ChatService {
     private actionUrl: string;
 
     constructor(private http: HttpClient) {
-        this.actionUrl = 'http://localhost:3000/history';
-        // this.actionUrl = 'http://hsgapi.azurewebsites.net/history';
+        //this.actionUrl = 'http://localhost:3000/history';
+        this.actionUrl = 'http://hsgapi.azurewebsites.net/history';
     }
 
     public addToHistory(message: ChatMessage): Observable<ChatMessage> {
