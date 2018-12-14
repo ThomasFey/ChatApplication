@@ -1,0 +1,14 @@
+<div id="modal-wrapper" class="modal">
+  <form class="modal-content animate" action="/action_page.php">
+
+    <div class="imgcontainer">
+      <img src="\assets\images\User_Avatar.png" alt="Avatar" clangss="avatar">
+      <h1 style="text-align:center">Hier kannst du deinen Nicknamen wählen</h1>
+    </div>
+
+    <div class="container">
+      <input type="text" class="form-control" placeholder="Bitte gib deinen Nicknamen ein." ng-model="$parent.nickname" id="input-nickname" name="input-nickname">
+      <button type="submit" (click)="createNickname(nickname)" [disabled]="!document.getElementById('input-nickname').value">Login</button>
+    </div>
+  </form>
+</div>
