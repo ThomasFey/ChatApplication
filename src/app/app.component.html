@@ -13,23 +13,8 @@
       <div class="col-sm-12 col-md-8">
         <app-chat-history></app-chat-history>
         <app-chat-bar></app-chat-bar>
-        <div>{{message}}</div>
+        <app-popup-nickname></app-popup-nickname>
       </div>
-    </div>
-    <div id="modal-wrapper" class="modal">
-      <form class="modal-content animate" action="/action_page.php">
-
-        <div class="imgcontainer">
-          <img src="\assets\images\User_Avatar.png" alt="Avatar" class="avatar">
-          <h1 style="text-align:center">Modal Popup Box</h1>
-        </div>
-
-        <div class="container">
-          <input type="text" placeholder="Enter Username" [(ngModel)]="nickname">
-          <button type="submit" (click)="createNickname(nickname)" >Login</button>
-        </div>
-
-      </form>
     </div>
   </div>
   <app-footer></app-footer>
