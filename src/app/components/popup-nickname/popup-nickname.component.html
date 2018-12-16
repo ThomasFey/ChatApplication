@@ -2,13 +2,14 @@
   <form class="modal-content animate" action="/action_page.php">
 
     <div class="imgcontainer">
-      <img src="\assets\images\User_Avatar.png" alt="Avatar" clangss="avatar">
-      <h1 style="text-align:center">Hier kannst du deinen Nicknamen wählen</h1>
-    </div>
+      <img src="\assets\images\User.jpg" alt="Avatar" clangss="avatar">
+      <h1 style="text-align:center">Wähle deinen Nicknamen</h1>
+    </div>  
+    <div class="error">{{message}}</div>
 
     <div class="container">
       <input type="text" class="form-control" placeholder="Bitte gib deinen Nicknamen ein." ng-model="$parent.nickname" id="input-nickname" name="input-nickname">
-      <button type="submit" (click)="createNickname(nickname)" [disabled]="!document.getElementById('input-nickname').value">Login</button>
+      <button type="submit" (click)="createNickname(nickname)" [disabled]="!document.getElementById('input-nickname').value">Anmelden</button>
     </div>
   </form>
 </div>

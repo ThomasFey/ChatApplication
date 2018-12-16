@@ -8,16 +8,8 @@ import { Person } from 'src/app/shared/Models/person';
 })
 export class NickNameComponent implements OnInit {
 
-  public message: string;
-
   constructor() { }
 
   ngOnInit() {
-  }
-
-  public createNickname(name: string): void {
-    Person.Nickname = name;
-
-    this.message = `nickname: '${name}' erstellt`;
   }
 }

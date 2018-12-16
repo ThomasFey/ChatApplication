@@ -1,5 +1,5 @@
 textarea {
-  width: 632.9px;
+  width: 620px;
   display: inline-block;
   vertical-align: top;
 }
@@ -13,7 +13,7 @@ div {
 button {
   display: inline-block;
   vertical-align: top;
-  height: 57px;
+  height: 65px;
 }
 
 .btn-primary {

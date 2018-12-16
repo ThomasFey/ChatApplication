@@ -1,5 +1,23 @@
-div {
-    height: 80%;
+.historybox {
     overflow: auto;
+    height: 80%;
     margin-top: 40px;
+    text-align: center;
 }
+.msg-box{
+    word-wrap: break-word;
+    border-color: black;
+}
+
+.left {
+    float: left;
+    background: white;
+    width: 65%;
+}
+
+.right {
+    float: right;
+    background: yellowgreen;
+    width: 65%;
+}
+

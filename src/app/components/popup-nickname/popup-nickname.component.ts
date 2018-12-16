@@ -17,10 +17,17 @@ export class PopupNicknameComponent implements OnInit {
   public createNickname(name: string): void {
     
     var inputname = document.getElementById('input-nickname');
-    Person.Nickname = inputname.value;
 
-    var modal = document.getElementById('modal-wrapper');
-    modal.style.display = "none";
+    if(inputname.value.trim()!=''){
+      Person.Nickname = inputname.value;
+      var modal = document.getElementById('modal-wrapper');
+      modal.style.display = "none";
+      this.message='';
+      var nicknamelabel = document.getElementById('nickname-label');
+      nicknamelabel.innerText = inputname.value;
+    }else{
+      this.message = "Bitte gib einen Nicknamen ein";
+    }
   }
 
 }

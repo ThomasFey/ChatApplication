@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/shared/services/chat.service';
-
+import { ChatMessage } from 'src/app/shared/Models/chat-message';
+import { Person } from 'src/app/shared/Models/person';
 @Component({
   selector: 'app-chat-history',
   templateUrl: './chat-history.component.html',
@@ -8,7 +9,8 @@ import { ChatService } from 'src/app/shared/services/chat.service';
 })
 export class ChatHistoryComponent implements OnInit {
 
-  public history: string;
+  //public history: string;
+  public history: ChatMessage[] = [];
 
   constructor(private chatService: ChatService) { }
 
@@ -18,16 +20,20 @@ export class ChatHistoryComponent implements OnInit {
     }, 2000);
   }
 
+  
+  public getNickname() : string {
+    return Person.Nickname;
+  }
+  
   private getHistory(): void {
+
     this.chatService.getHistory()
-      .subscribe(response => {
-        this.history = '';
 
-        for (const history of response.reverse()) {
-          const date = new Date(history.date);
-
-          this.history += `${history.nickname}:<br>(${date.toLocaleString('de')})<br>${history.message}<br>`;
-        }
-      });
+    .subscribe(response => {
+      this.history = [];
+      for(var h of response){
+        this.history.push(new ChatMessage(h.nickname, h.message, new Date(h.date)));
+      }
+    });
   }
 }
