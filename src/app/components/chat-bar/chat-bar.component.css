@@ -1,0 +1,22 @@
+textarea {
+  width: 632.9px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+div {
+  display: inline-block;
+  vertical-align: top;
+  width: 730px;
+}
+
+button {
+  display: inline-block;
+  vertical-align: top;
+  height: 57px;
+}
+
+.btn-primary {
+  background-color: green;
+  border-color: green;
+}

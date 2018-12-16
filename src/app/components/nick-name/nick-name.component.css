@@ -1,0 +1,16 @@
+.btn-primary {
+  background-color: green;
+  border-color: green;
+}
+
+h3{
+  margin-top: 100px;
+}
+
+#Werbung{
+  margin-top: 140px;
+  border: solid;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-left: 10px;
+}

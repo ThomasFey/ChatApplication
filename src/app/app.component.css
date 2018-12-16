@@ -9,10 +9,26 @@ div {
   width: 200px;
 }
 
-.col-sm-12 col-md-8{
-  background: lightgrey;
+#ChatColumn {
+  background-color: gray;
+  color: gray;
+  min-height: 250px;
+  height: 86vh;
+  min-width: 400px;
 }
 
-.col-sm-12 col-md-12 {
-  background: white;
+#row{
+  height: 100%;
+}
+
+app-footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#container{
+  min-height: 84.5vh;
+  margin-left: 100px;
+  margin-right: 100px;
 }

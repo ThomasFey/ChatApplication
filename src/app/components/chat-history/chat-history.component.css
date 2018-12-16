@@ -1,4 +1,5 @@
 div {
-    height: 250px;
+    height: 80%;
     overflow: auto;
+    margin-top: 40px;
 }
